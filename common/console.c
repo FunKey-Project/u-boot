@@ -695,7 +695,7 @@ static void console_update_silent(void)
 	if (getenv("silent") != NULL)
 		gd->flags |= GD_FLG_SILENT;
 	else
-		gd->flags &= ~GD_FLG_SILENT;
+		gd->flags |= GD_FLG_SILENT;
 #endif
 }
 

@@ -316,7 +316,7 @@ static int boot_from_devices(struct spl_image_info *spl_image,
 		loader = spl_ll_find_loader(spl_boot_list[i]);
 #if defined(CONFIG_SPL_SERIAL_SUPPORT) && defined(CONFIG_SPL_LIBCOMMON_SUPPORT)
 		if (loader)
-			printf("Trying to boot from %s", loader->name);
+		  ;//printf("Trying to boot from %s", loader->name);
 		else
 			puts("SPL: Unsupported Boot Device!\n");
 #endif
@@ -407,8 +407,9 @@ void preloader_console_init(void)
 
 	gd->have_console = 1;
 
-	puts("\nU-Boot SPL " PLAIN_VERSION " (" U_BOOT_DATE " - " \
+	/*puts("\nU-Boot SPL " PLAIN_VERSION " (" U_BOOT_DATE " - "	\
 			U_BOOT_TIME ")\n");
+	*/
 #ifdef CONFIG_SPL_DISPLAY_PRINT
 	spl_display_print();
 #endif

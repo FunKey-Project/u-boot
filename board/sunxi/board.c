@@ -540,9 +540,9 @@ void sunxi_board_init(void)
 	power_failed |= axp_set_sw(IS_ENABLED(CONFIG_AXP_SW_ON));
 #endif
 #endif
-	printf("DRAM:");
+	//printf("DRAM:");
 	ramsize = sunxi_dram_init();
-	printf(" %d MiB\n", (int)(ramsize >> 20));
+	//printf(" %d MiB\n", (int)(ramsize >> 20));
 	if (!ramsize)
 		hang();
 
